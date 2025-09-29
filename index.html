@@ -6,36 +6,58 @@
   
   <!-- Primary Meta Tags -->
   <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="UniFlow-Audio">
+  <meta name="title" content="UniFlow-Audio: Unified Flow Matching for Audio Generation from Omni-Modalities">
   <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="We propose UniFlow-Audio, a flow-matching-based universal audio generation framework that unifies both TA and NTA tasks within a single NAR model.">
+  <meta name="description" content="Audio generation, including speech, music and sound effects, has advanced rapidly in recent years.
+  These tasks can be divided into two categories: time-aligned (TA) tasks, where each input unit corresponds to a specific segment of the output audio (e.g., phonemes aligned with frames in speech synthesis); and non-time-aligned (NTA) tasks, where such alignment is not available.
+  Since modeling paradigms for the two types are typically different, research on different audio generation tasks has traditionally followed separate trajectories.
+  However, audio is not inherently divided into such categories, making a unified model a natural and necessary goal for general audio generation.
+  Previous unified audio generation works have adopted autoregressive architectures, while unified non-autoregressive approaches remain largely unexplored.
+  In this work, we propose UniFlow-Audio, a universal audio generation framework based on flow matching.
+  We propose a dual-fusion mechanism that temporally aligns audio latents with TA features and integrates NTA features via cross-attention in each model block.
+  Task-balanced data sampling is employed to maintain strong performance across both TA and NTA tasks.
+  UniFlow-Audio supports omni-modalities, including text, audio, and video.
+  By leveraging the advantage of multi-task learning and the generative modeling capabilities of flow matching, UniFlow-Audio achieves strong results across 7 tasks using fewer than 8K hours of public training data and under 1B trainable parameters.
+  Even the small variant with only ~200M parameters shows competitive performance, highlighting UniFlow-Audio as a potential non-auto-regressive foundation model for audio generation.
+  Code and models will be available at https://wsntxxn.github.io/uniflow_audio.">
   <!-- TODO: Add 5-10 relevant keywords for your research area -->
   <meta name="keywords" content="AI, audio generation, flow matching">
   <!-- TODO: List all authors -->
-  <meta name="author" content="Anonymous Author">
+  <meta name="author" content="Xuenan Xu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
+  <meta property="og:site_name" content="Shanghai Artificial Intelligence Lab">
   <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
+  <meta property="og:title" content="UniFlow-Audio: Unified Flow Matching for Audio Generation from Omni-Modalities">
   <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <meta property="og:description" content="Audio generation, including speech, music and sound effects, has advanced rapidly in recent years.
+  These tasks can be divided into two categories: time-aligned (TA) tasks, where each input unit corresponds to a specific segment of the output audio (e.g., phonemes aligned with frames in speech synthesis); and non-time-aligned (NTA) tasks, where such alignment is not available.
+  Since modeling paradigms for the two types are typically different, research on different audio generation tasks has traditionally followed separate trajectories.
+  However, audio is not inherently divided into such categories, making a unified model a natural and necessary goal for general audio generation.
+  Previous unified audio generation works have adopted autoregressive architectures, while unified non-autoregressive approaches remain largely unexplored.
+  In this work, we propose UniFlow-Audio, a universal audio generation framework based on flow matching.
+  We propose a dual-fusion mechanism that temporally aligns audio latents with TA features and integrates NTA features via cross-attention in each model block.
+  Task-balanced data sampling is employed to maintain strong performance across both TA and NTA tasks.
+  UniFlow-Audio supports omni-modalities, including text, audio, and video.
+  By leveraging the advantage of multi-task learning and the generative modeling capabilities of flow matching, UniFlow-Audio achieves strong results across 7 tasks using fewer than 8K hours of public training data and under 1B trainable parameters.
+  Even the small variant with only ~200M parameters shows competitive performance, highlighting UniFlow-Audio as a potential non-auto-regressive foundation model for audio generation.
+  Code and models will be available at https://wsntxxn.github.io/uniflow_audio.">
   <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <meta property="og:url" content="https://wsntxxn.github.io/uniflow_audio">
   <!-- TODO: Create a 1200x630px preview image and update path -->
   <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="article:published_time" content="2025-10-01T00:00:00.000Z">
+  <meta property="article:author" content="Xuenan Xu">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="unified audio generation">
+  <meta property="article:tag" content="flow matching">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -44,18 +66,29 @@
   <!-- TODO: Replace with first author's Twitter handle -->
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
   <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
+  <meta name="twitter:title" content="UniFlow-Audio: Unified Flow Matching for Audio Generation from Omni-Modalities">
   <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <meta name="twitter:description" content="Audio generation, including speech, music and sound effects, has advanced rapidly in recent years.
+  These tasks can be divided into two categories: time-aligned (TA) tasks, where each input unit corresponds to a specific segment of the output audio (e.g., phonemes aligned with frames in speech synthesis); and non-time-aligned (NTA) tasks, where such alignment is not available.
+  Since modeling paradigms for the two types are typically different, research on different audio generation tasks has traditionally followed separate trajectories.
+  However, audio is not inherently divided into such categories, making a unified model a natural and necessary goal for general audio generation.
+  Previous unified audio generation works have adopted autoregressive architectures, while unified non-autoregressive approaches remain largely unexplored.
+  In this work, we propose UniFlow-Audio, a universal audio generation framework based on flow matching.
+  We propose a dual-fusion mechanism that temporally aligns audio latents with TA features and integrates NTA features via cross-attention in each model block.
+  Task-balanced data sampling is employed to maintain strong performance across both TA and NTA tasks.
+  UniFlow-Audio supports omni-modalities, including text, audio, and video.
+  By leveraging the advantage of multi-task learning and the generative modeling capabilities of flow matching, UniFlow-Audio achieves strong results across 7 tasks using fewer than 8K hours of public training data and under 1B trainable parameters.
+  Even the small variant with only ~200M parameters shows competitive performance, highlighting UniFlow-Audio as a potential non-auto-regressive foundation model for audio generation.
+  Code and models will be available at https://wsntxxn.github.io/uniflow_audio.">
   <!-- TODO: Same as social preview image above -->
   <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
+  <meta name="citation_title" content="UniFlow-Audio: Unified Flow Matching for Audio Generation from Omni-Modalities">
+  <meta name="citation_author" content="Xuenan, Xu">
+  <meta name="citation_author" content="Jiahao, Mei">
+  <meta name="citation_publication_date" content="2025">
   <meta name="citation_conference_title" content="CONFERENCE_NAME">
   <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
   
@@ -74,7 +107,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>UniFlow-Audio: A Unified Flow Matching Framework for Audio Generation from Omni-Modalities</title>
+  <title>UniFlow-Audio: Unified Flow Matching for Audio Generation from Omni-Modalities</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -192,28 +225,71 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">UniFlow-Audio: A Unified Flow Matching Framework for Audio Generation from Omni-Modalities</h1>
+            <h1 class="title is-2 publication-title">UniFlow-Audio: Unified Flow Matching for Audio Generation from Omni-Modalities</h1>
             <!-- Original authors (commented out for anonymous submission) -->
-
-            <!-- Anonymous authors for submission -->
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-6 publication-authors" style="margin-bottom: 0.0rem;">
               <span class="author-block">
-                Anonymous Author
+                <a href="https://wsntxxn.github.io" target="_blank">Xuenan Xu</a><sup>1,*,†</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=piHw3UAAAAAJ" target="_blank">Jiahao Mei</a><sup>2,5,*</sup>
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Zihao Zheng</a><sup>1,2</sup>
+                Zihao Zheng
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Ye Tao</a><sup>1,2</sup>
+                Ye Tao
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=LzSAnHMAAAAJ" target="_blank">Zeyu Xie</a><sup>3</sup>
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yaoyun Zhang</a><sup>2</sup>
+                Yaoyun Zhang
+              </span>
+              <span class="author-block">
+                <a href="https://haoheliu.github.io" target="_blank">Haohe Liu</a><sup>4</sup>
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yuning Wu</a><sup>5</sup>
+                Yuning Wu
+              </span>
+              <span class="author-block">
+                <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Ming Yan</a><sup>5</sup>
+                Ming Yan
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=nvIWQG0AAAAJ" target="_blank">Wen Wu</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://mi.eng.cam.ac.uk/~cz277" target="_blank">Chao Zhang</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <a href="https://myw19.github.io" target="_blank">Mengyue Wu</a><sup>2</sup>
               </span>
             </div>
+            <div class="is-size-6 publication-authors" style="margin-bottom: 0.5rem;">
+              <span><sup>1</sup>Shanghai Artificial Intelligence Lab <sup>2</sup>Shanghai Jiao Tong University</span>
+              <span><sup>3</sup>Peking University <sup>4</sup>Meta <sup>5</sup>Alibaba Group</span>
+              <br>
+              <span class="eql-cntrb"><sup>*</sup>Equal Contribution</span>
+              <span class="eql-cntrb"><sup>†</sup>Project Lead</span>
+            </div>
 
-            <!-- <div class="column has-text-centered"> -->
-              <!-- <div class="publication-links"> -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
                 <!-- TODO: Update with your arXiv paper ID -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                <span class="link-block">
+                  <a href="#" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                   </a>
-                </span> -->
+                </span>
 
                 <!-- TODO: Add your supplementary material PDF or remove this section -->
                 <!-- <span class="link-block">
@@ -227,15 +303,15 @@
                 </span> -->
 
                 <!-- TODO: Replace with your GitHub repository URL -->
-                <!-- <span class="link-block">
-                <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
+                <span class="link-block">
+                  <a href="https://github.com/wsntxxn/UniFlow-Audio" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
                 </span>
-                <span>Code</span>
-              </a>
-                </span> -->
 
                 <!-- TODO: Update with your arXiv paper ID -->
                 <!-- <span class="link-block">
@@ -276,10 +352,21 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+        <h2 class="title is-4">Abstract</h2>
+        <div class="content has-text-justified" style="font-size: 0.9rem;">
           <!-- TODO: Replace with your paper abstract -->
-          <p>Audio generation, including speech, music and sound effects, has advanced rapidly in recent years. These tasks can be divided into two categories: time-aligned (TA) tasks, where each input unit corresponds to a specific segment of the output audio (e.g., phonemes aligned with frames in speech synthesis); and non-time-aligned (NTA) tasks, where such alignment is not available. Since modeling paradigms for the two types are typically different, research on different audio generation tasks has traditionally followed separate trajectories. However, audio is not inherently divided into such categories, making a unified model a natural and necessary goal for general audio generation. Prior works on universal audio generation remain limited: auto-regressive models struggle with NTA tasks, while diffusion models often overlook TA tasks. In this work, we propose UniFlow-Audio, a universal audio generation framework based on flow matching. We propose a dual-fusion mechanism that temporally aligns audio latents with TA features and integrates NTA features via cross-attention in each model block. Task-balanced data sampling is employed to maintain strong performance across both TA and NTA tasks. UniFlow-Audio supports omni modalities, including text, audio, and video. By leveraging the advantage of multi-task learning and the generative modeling capabilities of flow matching, UniFlow-Audio achieves strong results across 7 tasks using fewer than 8K hours of public training data and under 1B trainable parameters. Even the small variant with only $~$200M parameters shows competitive performance, highlighting UniFlow-Audio as a potential non-auto-regressive foundation model for audio generation. Code and models will be available at https://anonymous3387a8c.github.io/uniflow_audio.
+          <p>Audio generation, including speech, music and sound effects, has advanced rapidly in recent years.
+            These tasks can be divided into two categories: time-aligned (TA) tasks, where each input unit corresponds to a specific segment of the output audio (e.g., phonemes aligned with frames in speech synthesis); and non-time-aligned (NTA) tasks, where such alignment is not available.
+            Since modeling paradigms for the two types are typically different, research on different audio generation tasks has traditionally followed separate trajectories.
+            However, audio is not inherently divided into such categories, making a unified model a natural and necessary goal for general audio generation.
+            Previous unified audio generation works have adopted autoregressive architectures, while unified non-autoregressive approaches remain largely unexplored.
+            In this work, we propose UniFlow-Audio, a universal audio generation framework based on flow matching.
+            We propose a dual-fusion mechanism that temporally aligns audio latents with TA features and integrates NTA features via cross-attention in each model block.
+            Task-balanced data sampling is employed to maintain strong performance across both TA and NTA tasks.
+            UniFlow-Audio supports omni-modalities, including text, audio, and video.
+            By leveraging the advantage of multi-task learning and the generative modeling capabilities of flow matching, UniFlow-Audio achieves strong results across 7 tasks using fewer than 8K hours of public training data and under 1B trainable parameters.
+            Even the small variant with only ~200M parameters shows competitive performance, highlighting UniFlow-Audio as a potential non-auto-regressive foundation model for audio generation.
+            Code and models will be available at https://wsntxxn.github.io/uniflow_audio.
           </p>
         </div>
       </div>
@@ -293,8 +380,8 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method Overview</h2>
-        <div class="content has-text-justified">
+        <h2 class="title is-4">Method Overview</h2>
+        <div class="content has-text-justified" style="font-size: 0.9rem;">
           <!-- Method overview image -->
           <div class="has-text-centered">
             <figure class="image">

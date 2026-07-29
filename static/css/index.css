@@ -731,6 +731,37 @@ a:focus {
   outline-offset: 2px;
 }
 
+/* UniFlow-Audio v1.1 sample gallery */
+.sample-task {
+  margin-top: 3rem;
+  scroll-margin-top: 1rem;
+}
+
+.sample-task table td,
+.sample-task table th {
+  vertical-align: middle;
+}
+
+.sample-task audio {
+  width: 280px;
+  max-width: 100%;
+}
+
+.sample-task video,
+.sample-task .spectrogram {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  .sample-task table {
+    min-width: 680px;
+  }
+}
+
 
 /* Print styles */
 @media print {
@@ -748,6 +779,5 @@ a:focus {
     box-shadow: none !important;
   }
 }
-
 
 
